@@ -3,6 +3,7 @@
 .Navbar{
  display: flex;
  justify-content: space-between;
+ margin-bottom: 1em ;
 }
 
 .Navbar h1{
@@ -20,8 +21,8 @@
 }
 
 .Navbar .NavbarList .ulList li{
- margin-right: 0.5em;
- margin-top: 1.9em;
+ margin-right: 0.8em;
+ margin-top: 1.2em;
  font-weight: 600;
 }
 
@@ -45,15 +46,19 @@
 
 @media (max-width:700px) {
 
+  .Navbar{
+    flex-direction: row-reverse;
+  }
+
  .Navbar .NavbarList .ulList > .NavbarListLi{
  display: none;                         
 }
 
 .Menu  i{
       display: flex;
-      position: static;
-      /* right: 1em; */
-      /* top: 1.1em; */
+      position: absolute;
+      top: 1em;
+      left: 1em;
       margin: 0 auto;
       font-size: 1.5em;
  } 
@@ -62,17 +67,18 @@
      display: flex;
      flex-direction: column;  
      padding: 2em;
+     margin: 0 auto;
  }
 
  .Menu{
-       background:#b6c1ce;
-       padding: 1.1em;  
+       /* background:#b6c1ce; */
+       padding: 0.5em;  
  }
 
  .Navbar .NavbarList button{
-      width: 0px;
+      /* width: 0px; */
       font-weight: 600;
-      color:black;
+      /* color:black; */
      }
 }
 

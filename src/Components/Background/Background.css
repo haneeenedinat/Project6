@@ -1,0 +1,25 @@
+
+.background .backgroundImg{
+    min-height: 60vh;
+    border:1px solid #dbe0e6;
+}
+
+.background .TextBackground {
+    width: 40%;
+    background-color: #b6c1cea6;
+    padding: 1em;
+    border-radius: 4px;
+    margin: 10em auto;
+}
+
+@media (max-width:768px) {
+    .background .TextBackground {
+        width: 80%;
+    }   
+}
+
+@media (max-width:500px) {
+    .background .TextBackground {
+        width: 90%;
+    }   
+}
