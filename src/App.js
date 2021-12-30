@@ -1,10 +1,16 @@
 
 import './App.css';
+import Background from './Components/Background/Background';
+import Footer from './Components/Footer/Footer';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-     <i class="fas fa-bars"></i>
+    
+     <Navbar/>
+     <Background/>
+    <Footer/>
     </div>
   );
 }
