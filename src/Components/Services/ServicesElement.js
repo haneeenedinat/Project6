@@ -1,4 +1,5 @@
 import React from "react";
+import BookButton from "../BookButton/BookButton";
 import './ServicesElement.css'
 
 export default function ServicesElement(props) {
@@ -20,6 +21,8 @@ export default function ServicesElement(props) {
         <div className="ServicesElementPrice">
           <strong>{props.price}</strong>
         </div>
+
+      <BookButton  SelectedObj={props}/>
       </div>
     </div>
   );

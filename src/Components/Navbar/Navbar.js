@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <div className="Navbar">
       <div className="NavbarImg">
-        <h1>wedding</h1>
+        <h1>Events</h1>
       </div>
 
       {UserLogin ? (

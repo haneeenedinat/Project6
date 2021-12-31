@@ -1,0 +1,19 @@
+.BookButton button{
+    background:#b6c1ce;
+    color: white;
+    border: 1px solid #b6c1ce;
+    width: 100px;
+    border-radius: 3px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.3em;
+    margin-bottom: 1em;
+}
+
+.BookButton button:hover{
+    background-color: white;
+    color:black;
+    box-shadow:1px 1px 6px #333333; 
+    transition: 0.9s ease;
+}

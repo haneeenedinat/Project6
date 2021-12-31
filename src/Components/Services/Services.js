@@ -8,22 +8,22 @@ export default function Services(){
     const WeddingArr=[
         {
             id:'0',
-            src:'../img/Services.jpg',
-            title:'Chairs',
+            src:'../img/Services11.jpg',
+            title:'Birthday Party',
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum enim eu nibh finibus',
             price: "$30.50",
         },
         {
             id:'1',
             src:'../img/Services2.jpg',
-            title:'Wedding Chairs',
+            title:'Wedding',
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum enim eu nibh finibus',
             price: "$10.0",
         },
         {
             id:'2',
-            src:'../img/Services3.png',
-            title:'tables',
+            src:'../img/Services13.png',
+            title:'Graduation Party',
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum enim eu nibh finibus',
             price: "$25.50",
         },
