@@ -16,8 +16,16 @@ line-height: 2;
 
 .Footer .FooterSocialMedia ul li {
    display: grid;
-   grid-template-columns: repeat(2,1fr);  
+   grid-template-columns: repeat(4,1fr);  
 }
+
+.twitter{
+grid-column:1/span 3;
+}
+.instagram{
+  grid-column: 1/span 3;
+}
+
 
 .Footer .FooterSocialMedia i{
   font-size: 1.2em;

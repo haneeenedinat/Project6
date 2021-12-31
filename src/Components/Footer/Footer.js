@@ -32,6 +32,9 @@ export default function Footer (){
              <a href="https://www.facebook.com/" className="facebook"><i className="fab fa-facebook"></i></a>
              <a href="https://www.instagram.com/" className="instagram"><i className="fab fa-instagram"></i></a >
              <a href="https://www.linkedin.com/feed/" className="linkedin"><i className="fab fa-linkedin"></i></a>
+             <a href="https://github.com/haneeenedinat" className="github"><i class="fab fa-github"></i></a>
+
+      
             </li>
             </ul>
          </div>
