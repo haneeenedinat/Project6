@@ -71,14 +71,11 @@
  }
 
  .Menu{
-       /* background:#b6c1ce; */
        padding: 0.5em;  
  }
 
  .Navbar .NavbarList button{
-      /* width: 0px; */
       font-weight: 600;
-      /* color:black; */
      }
 }
 

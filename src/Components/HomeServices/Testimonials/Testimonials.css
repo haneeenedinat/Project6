@@ -1,0 +1,41 @@
+.Testimonials {
+  display: flex;
+  flex-direction: column;
+  margin: 4em 0;
+  border-top: 1px solid #dbe0e6;
+}
+
+.Testimonials h2 {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.TestimonialsImg {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  margin: 0 auto;
+}
+
+.TestimonialsImg img {
+  width: 40vw;
+  height: 40vh;
+}
+
+@media (max-width: 610px) {
+  .Testimonials img {
+    width: 45vw;
+    height: 30vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .TestimonialsImg {
+    grid-template-columns: 1fr;
+  }
+
+  .TestimonialsImg img {
+    width: 80vw;
+
+  }
+}
