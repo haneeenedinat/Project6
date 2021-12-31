@@ -22,9 +22,6 @@
   line-height: 1.8;
   }
 
-  .HomeServicesText p{
-    /* text-align: center; */
-}
 
 .HomeServicesImg img{
     width: 35vw;
@@ -39,6 +36,15 @@
   border-radius: 3px;
   font-size: 1.1em;
   margin-top: 0.8em;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.HomeServicesText button:hover{
+  background-color: white;
+  color:black;
+  box-shadow:1px 1px 6px #333333; 
+  transition: 0.9s ease;
 }
 
 @media (max-width:1155px) {

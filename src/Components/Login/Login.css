@@ -1,0 +1,72 @@
+.Login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3em auto;
+    background:#dbdee1;
+    width: 30%;
+    border-radius: 10px;
+    min-height: 30vh;
+}
+
+.Login h2{
+    margin:0.5em 0;
+}
+
+.Login span{
+    margin: 1em 0;
+}
+
+.Login span strong a{
+text-decoration: none;
+color:#cf8dc6;
+}
+
+.Login .Loginform form{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Login .Loginform input{
+    width: 25vw;
+    padding: 0.7em;
+    margin: 0.5em 0;
+    border: none;
+    border-radius: 4px;
+}
+
+.Login .Loginform button{
+    width:100%;
+    background:#cf8dc6;
+    border-radius: 4px;
+    height: 5vh;
+    border:2px solid #cf8dc6;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+
+.Login .Loginform button:hover{
+   box-shadow: 1px 1px 10px #cf8dc6;
+}
+
+@media (max-width:947px) {
+    .Login{
+        width: 60%;
+    } 
+    .Login .Loginform input{
+        width: 40vw;
+    }
+}
+
+@media (max-width:566px) {
+    .Login{
+        width: 90%;
+        padding: 0.1em;
+    } 
+    .Login .Loginform input{
+        width: 70vw;
+    }
+}

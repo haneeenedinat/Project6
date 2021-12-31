@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import './Navbar.css'
 
 export default function Navbar(){
@@ -26,11 +27,11 @@ const [NumberOfClickMenu,setNumberOfClickMenu]=useState(1);
 
                <div className="NavbarList">
               <ul className="ulList">
-                     <li className="NavbarListLi">Home</li>
+                     <li className="NavbarListLi"><Link to={'/'}>Home</Link></li>
                      <li className="NavbarListLi">Services</li>
                      <li className="NavbarListLi">About Us</li>
                      <li className="NavbarListLi">Profile</li>
-                     <li className="NavbarListLi"><button>Login</button></li>
+                     <li className="NavbarListLi"><Link to={'/LoginPage'}><button>Login</button></Link></li>
 
                   <li className="Menu">
                   <i className="fas fa-bars" onClick={handelClickMenu}></i>

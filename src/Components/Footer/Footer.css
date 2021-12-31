@@ -42,7 +42,7 @@ grid-column:1/span 3;
 .Footer .FooterCopyright{
   display: flex;
   justify-content: center;
-  border-top:2px solid #dbe0e6;
+  border-top:1px solid #b6b9bd;
   padding: 2em;
 }
 
