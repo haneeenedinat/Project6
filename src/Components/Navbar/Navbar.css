@@ -4,7 +4,7 @@
  display: flex;
  justify-content: space-between;
  margin-bottom: 1em ;
- box-shadow:1px 1px 12px #333333; 
+ box-shadow:1px 1px 10px #333333; 
  position:sticky;
  top:0;
  padding: 0.2em 0;

@@ -1,0 +1,49 @@
+.ServicesElement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 22px rgba(0, 0, 0, 0.11);
+    border-radius: 2%;
+    padding: 0.3em;
+}
+
+.ServicesElement img{
+    width: 23vw;
+    height: 22vh;
+}
+
+.ServicesElement .ServicesElementInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ServicesElement .ServicesElementInformation p{
+    text-align: center;
+    margin:1em 0;
+}
+
+.ServicesElementInformation .ServicesElementTitle{
+    color:  #555657;  
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+.ServicesElementInformation  .ServicesElementPrice{
+    margin-bottom: 1em;
+}
+
+@media (max-width:810px) {
+    .ServicesElement img{
+        width: 35vw;
+        height: 22vh;
+    }
+}
+
+@media (max-width:610px) {
+    .ServicesElement img{
+        width: 75vw;
+        height: 35vh;
+    }
+}
+

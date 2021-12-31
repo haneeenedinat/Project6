@@ -1,5 +1,6 @@
 import React from "react";
-import './HomeServices.css'
+import './HomeServices.css';
+import {Link} from 'react-router-dom'
 
 export default function HomeServices() {
   return (
@@ -21,7 +22,7 @@ export default function HomeServices() {
           we’ll manage every last logistic and nosey-guest-question, or hand
           things off to you or your team depending on needs and budget.
         </p>
-        <button>Services</button>
+        <button><Link to={'/ServicesPage'}> Services</Link></button>
         </div>
       </div>
 

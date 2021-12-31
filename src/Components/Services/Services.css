@@ -1,0 +1,27 @@
+.Services{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 80%;
+    margin: 0 auto;
+    grid-gap:1em;
+}
+
+.ServicesTitle{
+    text-align: center;
+    margin: 3em 0 2em 0;
+}
+
+@media (max-width:810px) {
+    .Services{
+    grid-template-columns: repeat(2,1fr);
+
+    }
+}
+
+@media (max-width:610px) {
+    .Services{
+    grid-template-columns: 1fr;
+
+    }
+}
+
