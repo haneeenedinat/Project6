@@ -1,4 +1,5 @@
 import React from "react";
+import './ServicesElement.css'
 
 export default function ServicesElementWithoutButton(props){
     return(

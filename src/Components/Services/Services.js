@@ -18,7 +18,7 @@ export default function Services(){
             src:'../img/Services2.jpg',
             title:'Wedding',
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum enim eu nibh finibus',
-            price: "$10.0",
+            price: "$28.0",
         },
         {
             id:'2',
