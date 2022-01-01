@@ -1,11 +1,8 @@
 import React from "react";
-import BookButton from "../BookButton/BookButton";
-import './ServicesElement.css'
 
-
-export default function ServicesElement(props) {
-  return (
-    <div className="ServicesElement">
+export default function ServicesElementWithoutButton(props){
+    return(
+        <div className="ServicesElement">
         <div className="ServicesElementImg">
         <img src={props.src} alt={props.title} />
       </div>
@@ -22,10 +19,7 @@ export default function ServicesElement(props) {
         <div className="ServicesElementPrice">
         <strong> <p>{props.price}</p></strong> 
         </div>
-
-       
-      <BookButton  SelectedObj={props}/>
-      </div>
-      </div>
-  );
+        </div>
+        </div>
+    )
 }
