@@ -23,7 +23,7 @@ export default function OurServicesPage() {
         </div>
 
         <div className="OurServicesCalender">
-          <Calender />
+          <Calender/>
         </div>
       </div>
     </div>

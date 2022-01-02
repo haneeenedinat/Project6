@@ -37,7 +37,7 @@ export default function Navbar() {
             <li className="NavbarListLi"> <Link to={"/"}>Home</Link>  </li>
             <li className="NavbarListLi"><Link to={'/ServicesPage'}> Services</Link></li>
             <li className="NavbarListLi">About Us</li>
-            <li className="NavbarListLi">Profile</li>
+            <li className="NavbarListLi"><Link to={'/ProfilePage'}> Profile</Link></li>
             <li className="NavbarListLi">
               <Link to={"/LoginPage"}>
                 <button onClick={handelLogOut}>LogOut</button>
@@ -54,7 +54,7 @@ export default function Navbar() {
                   </li>
                   <li><Link to={'/ServicesPage'}> Services</Link></li>
                   <li>About Us</li>
-                  <li>Profile</li>
+                  <li><Link to={'/ProfilePage'}> Profile</Link></li>
                   <li>
                     <button onClick={handelLogOut}>LogOut</button>
                   </li>

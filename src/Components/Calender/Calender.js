@@ -1,140 +1,120 @@
 import React, { useState } from "react";
-import "./Calender.css";
+import './Calender.css'
 
-export default function Calender() {
+export default function Calender (){
+
+  const SelectedServices=JSON.parse( localStorage.getItem("SelectedServices"))
+  const [ StartDateEnter,setStartDateEnter]=useState();
+  const [Form,setForm]=useState(
+    {
+      StartDate:'',
+      Time:'',
+      SelectedServices:SelectedServices
+    } 
+  )
+
+
+
+  const AllTime=[
+    {text:'Please Select',value:''},
+    {text:'12--3',value:'12--3'},
+    {text:'3--6',value:'3--6'},
+    {text:'6--9',value:'6--9'},
+    {text:'9--12',value:'9--12'},
+  ]
+
+  
+  const TimeSelected=localStorage.getItem('TimeSelected')
+       ?JSON.parse(localStorage.getItem('TimeSelected')):
+       localStorage.setItem('TimeSelected',JSON.stringify([]));
+
+const handleStartDate=(e,attr)=>{
+setStartDateEnter(e.target.value);
+  setForm({...Form , [attr]:e.target.value})
  
-   
-    const today=new Date();
-    const day=today.getDate();
-    const Month=today.getMonth()+1;
-    const year=today.getFullYear();
-    
-    const minDateUesd=year+ '-'+Month+'-'+day;
-
-    const AllTime=[
-      {text:'Please Select',value:''},
-      {text:'12--3 PM', value:'12--3 PM'},
-      {text:'3--6 PM',value:'3--6 PM'},
-      {text:'6--9 PM',value:'6--9 PM'},
-      {text:'9--12 PM',value:'9--12 PM'}
-    ]
-
-    const [timeSlots, setTimeSlots] = useState(AllTime);
-
-    const [StartDateEnter,setStartDateEnter]=useState(minDateUesd);
-    const [Form,setForm]=useState(
-      {
-        startDate:'',
-        time:'',
-      }
-    )
-
-
-    
-
-    const handleStartDateEnter=(e,attr)=>{
-      setStartDateEnter(e.target.value)
-      setForm({...Form, [attr] : e.target.value});
-      setTimeSlots(AllTime)
-      // console.log(Form)
-      // console.log(AllTime)
-
-
-  const TimeSelectedArray=JSON.parse( localStorage.getItem("TimeSelected"))
-  ?JSON.parse( localStorage.getItem("TimeSelected")):[];
-   
-  let   conflict=false;
-  let filteredTimeSelectedArray=TimeSelectedArray.filter((element)=>{
-   if(element.startDate === StartDateEnter){
-   conflict=true;
-  }
-
-  else{
-     conflict=true
-  }
- 
-     console.log(element.startDate)
-     console.log(StartDateEnter)
-    //  console.log(timeSlots[element].value)
-    //  console.log(element.time)
-   return conflict;
-  })
-
-  console.log(conflict)
-
-
 }
 
 
-   
+const handleSelect=(e,attr)=>{
+setForm({...Form,[attr]:e.target.value})
+}
 
-    
+const handleSubmit=(e)=>{
+  e.preventDefault();
+  // console.log(StartDateEnter);
 
-    const handleSelect=(e,attr)=>{
-      setForm({...Form,[attr]:e.target.value})
+
+       TimeSelected.push(Form);
+
+        
+
+
+            //  const UserSelected={
+            //   time:Form.Time,
+            //   startdate:Form.StartDate,
+            // }
+
+            // const UserSelectedlocal=localStorage.getItem('UserSelected')
+            // ?JSON.parse(localStorage.getItem('UserSelected')):
+            // localStorage.setItem('UserSelected',JSON.stringify([]));
+
+
+            // let newarr=newarr.push(UserSelected)
+
+            // UserSelectedlocal.push(UserSelected)
+
+            // localStorage.setItem('UserSelected',JSON.stringify(UserSelected))
+
   
-    }
-
-    const handleSubmit=(e)=>{
-      e.preventDefault();
+       //  TimeSelected.forEach(element => {
+        for(let i=0;i<TimeSelected.length-1;i++){
+      
+        
+        if(StartDateEnter===TimeSelected[i].StartDate && TimeSelected[i].Time===Form.Time){
+          console.log('yes')
+      
+          alert("There is a conflict")
+       
+          break;
+        }
+        else{
+          
+          console.log('no');
+      
+          // localStorage.setItem('UserSelected',JSON.stringify(UserSelected))
+        
+        }
+ 
       
 
-     const TimeSelected= localStorage.getItem('TimeSelected')
-     ?JSON.parse(localStorage.getItem('TimeSelected')):[];
-
-     TimeSelected.push(Form);
-
- localStorage.setItem("TimeSelected" ,JSON.stringify(TimeSelected));
-
+      }
  
-    }
+      localStorage.setItem('TimeSelected',JSON.stringify(TimeSelected)); 
+ 
+}
 
-
-    
-
-    const stringToDate = (stringDate) => {
-      let stringDateValues = ("" + stringDate).split("-");
-      let dateValue = new Date(
-        stringDateValues[0],
-        Number(stringDateValues[1]) - 1,
-        stringDateValues[2]
-      );
-      return dateValue;
-    }
-
-    // const handleEndDateEnter=(e,attr)=>{
-    //   setEndDateEnter(e.target.value)
-    //   setForm({...form,[attr]:e.value.target})
-    //   console.log(EndDateEnter)
-    // }
-
-  return (
+  return(
     <div className="Calender">
+      <div className="CalenderTitle">
+        <h2>Select the Time </h2>
+      </div>
+
       <div className="CalenderForm">
         <form onSubmit={handleSubmit}>
-          <label>
-            Event  Date
-            <input type="date" min={minDateUesd} value={StartDateEnter} onChange={(e)=>{handleStartDateEnter(e,'startDate')}}/>
-          </label>
-{/* 
-          <label>
-            Event end date
-            <input type="date"  min={StartDateEnter} value={EndDateEnter} onChange={(e)=>{handleEndDateEnter(e,'endDate')}}/>
-          </label> */}
 
-          <label>
-            event time
+          <label>Start Date
+         <input type='date' onChange={(e)=>{handleStartDate(e,'StartDate')}}/></label>
 
-          <select onChange={(e)=>{handleSelect(e,'time')}} value={Form.time}>
-            {AllTime.map((element)=>{
-             return  <option value={element.value}>{element.text}</option>
-            })}
-          </select>
+         <select onChange={(e)=>{handleSelect(e,'Time')}}>
+           {AllTime.map((time)=>{
+           return  <option value={time.value}>{time.text}</option>
+           })}
+         </select>
 
-          </label>
-          <button type='submit'>submit</button>
+         <button type='submit' >Submit</button>
         </form>
       </div>
+
     </div>
-  );
+  )
 }
