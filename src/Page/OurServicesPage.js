@@ -1,6 +1,7 @@
 import React from "react";
 import Calender from "../Components/Calender/Calender";
 import ServicesElementWithoutButton from "../Components/Services/ServicesElementWithoutButton";
+import './OurServicesPage.css'
 
 export default function OurServicesPage() {
   const SelectedServices =JSON.parse( localStorage.getItem("SelectedServices"));
@@ -11,7 +12,12 @@ export default function OurServicesPage() {
         <h2>Our Services</h2>
       </div>
 
-      <div>
+      <div className="ServicesSelectedandCalender"> 
+
+      <div className="OurServicesCalender">
+          <Calender/>
+        </div>
+        
         <div className="ServicesElementWithoutButton">
           <ServicesElementWithoutButton
             id={SelectedServices.id}
@@ -22,9 +28,7 @@ export default function OurServicesPage() {
           />
         </div>
 
-        <div className="OurServicesCalender">
-          <Calender/>
-        </div>
+        
       </div>
     </div>
   );

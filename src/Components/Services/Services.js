@@ -11,21 +11,21 @@ export default function Services(){
             src:'../img/Services11.jpg',
             title:'Birthday Party',
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum enim eu nibh finibus',
-            price: "$30.50",
+            price: "200",
         },
         {
             id:'1',
             src:'../img/Services2.jpg',
             title:'Wedding',
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum enim eu nibh finibus',
-            price: "$28.0",
+            price: "500",
         },
         {
             id:'2',
             src:'../img/Services13.png',
             title:'Graduation Party',
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum enim eu nibh finibus',
-            price: "$25.50",
+            price: "250",
         },
 
     ]

@@ -37,6 +37,7 @@ export default function Navbar() {
             <li className="NavbarListLi"> <Link to={"/"}>Home</Link>  </li>
             <li className="NavbarListLi"><Link to={'/ServicesPage'}> Services</Link></li>
             <li className="NavbarListLi">About Us</li>
+            <li className="NavbarListLi"><Link to={'./CheckOutPage'}>CheckOut</Link></li>
             <li className="NavbarListLi"><Link to={'/ProfilePage'}> Profile</Link></li>
             <li className="NavbarListLi">
               <Link to={"/LoginPage"}>
@@ -54,6 +55,7 @@ export default function Navbar() {
                   </li>
                   <li><Link to={'/ServicesPage'}> Services</Link></li>
                   <li>About Us</li>
+                  <li><Link to={'./CheckOutPage'}>CheckOut</Link></li>
                   <li><Link to={'/ProfilePage'}> Profile</Link></li>
                   <li>
                     <button onClick={handelLogOut}>LogOut</button>
@@ -71,6 +73,7 @@ export default function Navbar() {
             </li>
             <li className="NavbarListLi"><Link to={'/ServicesPage'}> Services</Link></li>
             <li className="NavbarListLi">About Us</li>
+            <li className="NavbarListLi"><Link to={'./CheckOutPage'}>CheckOut</Link></li>
             <li className="NavbarListLi">
               <Link to={"/LoginPage"}>
                 <button>Login</button>
@@ -87,6 +90,7 @@ export default function Navbar() {
                   </li>
                   <li><Link to={'/ServicesPage'}> Services</Link></li>
                   <li>About Us</li>
+                  <li><Link to={'./CheckOutPage'}>CheckOut</Link></li>
                   <li>
                     <Link to={"/LoginPage"}>
                       <button>Login</button>

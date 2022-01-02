@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import './Calender.css'
+import swal from "sweetalert";
+
 
 export default function Calender (){
 
-  const SelectedServices=JSON.parse( localStorage.getItem("SelectedServices"))
+  const SelectedServices=JSON.parse( localStorage.getItem("SelectedServices"));
+ 
   const [ StartDateEnter,setStartDateEnter]=useState();
   const [Form,setForm]=useState(
     {
@@ -71,16 +74,22 @@ const handleSubmit=(e)=>{
       
         
         if(StartDateEnter===TimeSelected[i].StartDate && TimeSelected[i].Time===Form.Time){
-          console.log('yes')
-      
-          alert("There is a conflict")
+          swal({
+            title: "Error!",
+            text: "There is a conflict ",
+            buttons: "ok",
+          });
        
           break;
         }
         else{
-          
-          console.log('no');
-      
+         
+          swal({
+            title: "Done",
+            text: "To complete the purchase, go to CheckOut page ",
+            buttons: "ok",
+          });
+       
           // localStorage.setItem('UserSelected',JSON.stringify(UserSelected))
         
         }
@@ -90,21 +99,22 @@ const handleSubmit=(e)=>{
       }
  
       localStorage.setItem('TimeSelected',JSON.stringify(TimeSelected)); 
- 
+
 }
 
   return(
     <div className="Calender">
       <div className="CalenderTitle">
-        <h2>Select the Time </h2>
+        <h3>Select the Time </h3>
       </div>
 
       <div className="CalenderForm">
         <form onSubmit={handleSubmit}>
 
-          <label>Start Date
-         <input type='date' onChange={(e)=>{handleStartDate(e,'StartDate')}}/></label>
-
+          <label>Event Date</label>
+         <input type='date' onChange={(e)=>{handleStartDate(e,'StartDate')}}/>
+         
+         <label>Select Time</label>
          <select onChange={(e)=>{handleSelect(e,'Time')}}>
            {AllTime.map((time)=>{
            return  <option value={time.value}>{time.text}</option>

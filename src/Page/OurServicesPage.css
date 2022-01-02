@@ -1,0 +1,29 @@
+.OurServicesPage .OurServicesTitle{
+    display: flex;
+}
+
+.OurServicesPage .ServicesSelectedandCalender{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:1em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.OurServicesPage  .OurServicesCalender{
+    grid-column:1/ span 2;
+}
+.OurServicesPage  .OurServicesTitle {
+    margin: 4em 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+@media (max-width:610px) {
+
+    .OurServicesPage .ServicesSelectedandCalender{
+        grid-template-columns: 1fr;
+    }
+}
+
