@@ -56,6 +56,18 @@
   color: black;
 }
 
+.HomeServicesImg{
+position: relative;
+animation-name: example;
+animation-duration: 3s;  
+
+}
+
+@keyframes example {
+from {top: 100px;}
+to {top: 0px}
+}
+
 @media (max-width:1155px) {
     .HomeServicesText {
         line-height: 1.3;
