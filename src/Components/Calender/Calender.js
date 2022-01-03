@@ -12,7 +12,8 @@ export default function Calender (){
     {
       StartDate:'',
       Time:'',
-      SelectedServices:SelectedServices
+      price:SelectedServices.price,
+      title:SelectedServices.title,
     } 
   )
 
@@ -79,7 +80,7 @@ const handleSubmit=(e)=>{
             text: "There is a conflict ",
             buttons: "ok",
           });
-       
+      
           break;
         }
         else{
@@ -91,6 +92,7 @@ const handleSubmit=(e)=>{
           });
        
           // localStorage.setItem('UserSelected',JSON.stringify(UserSelected))
+  
         
         }
  
