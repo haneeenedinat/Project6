@@ -38,7 +38,6 @@ export default function Navbar() {
           <ul className="ulList">
             <li className="NavbarListLi"> <Link to={"/"}>Home</Link>  </li>
             <li className="NavbarListLi"><Link to={'/ServicesPage'}> Services</Link></li>
-            <li className="NavbarListLi">About Us</li>
             <li className="NavbarListLi"><Link to={'./CheckOutPage'}>CheckOut</Link></li>
             <li className="NavbarListLi"><Link to={'/ProfilePage'}> Profile</Link></li>
             <li className="NavbarListLi">
@@ -56,7 +55,6 @@ export default function Navbar() {
                     <Link to={"/"}>Home</Link>
                   </li>
                   <li><Link to={'/ServicesPage'}> Services</Link></li>
-                  <li>About Us</li>
                   <li><Link to={'./CheckOutPage'}>CheckOut</Link></li>
                   <li><Link to={'/ProfilePage'}> Profile</Link></li>
                   <li>
@@ -74,7 +72,6 @@ export default function Navbar() {
               <Link to={"/"}>Home</Link>
             </li>
             <li className="NavbarListLi"><Link to={'/ServicesPage'}> Services</Link></li>
-            <li className="NavbarListLi">About Us</li>
             <li className="NavbarListLi"><Link to={'./CheckOutPage'}>CheckOut</Link></li>
             <li className="NavbarListLi">
               <Link to={"/LoginPage"}>
@@ -91,7 +88,6 @@ export default function Navbar() {
                     <Link to={"/"}>Home</Link>
                   </li>
                   <li><Link to={'/ServicesPage'}> Services</Link></li>
-                  <li>About Us</li>
                   <li><Link to={'./CheckOutPage'}>CheckOut</Link></li>
                   <li>
                     <Link to={"/LoginPage"}>

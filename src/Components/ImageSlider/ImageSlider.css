@@ -1,0 +1,56 @@
+.ImageSlider img{
+    width: 50vw;
+    /* height: 30vh; */
+    border-radius: 10px;
+    /* width: 100px; */
+    height: 400px;
+}
+
+.OurWork h2{
+    text-align: center;
+    margin: 3em 0 1em 0;
+}
+
+.ImageSlider .fa-arrow-circle-left{
+    position:absolute;
+    top:50%;
+    left: 32px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.ImageSlider .fa-arrow-circle-right{
+    position:absolute;
+    top:50%;
+    right: 32px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.ImageSlider{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:700px) {
+    .ImageSlider img{
+        width: 70vw;
+        height: 30vh;
+        /* height: 50vh; */
+      }
+
+      .ImageSlider .fa-arrow-circle-left{
+        /* font-size: 2em; */
+        left: 10px;
+     
+    }
+    
+    .ImageSlider .fa-arrow-circle-right{
+        font-size: 2em;
+        right:10px;
+    }
+
+}
