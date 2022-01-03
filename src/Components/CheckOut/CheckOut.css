@@ -89,15 +89,14 @@ margin-left: 0.3em;
 }
 
 
-.CheckOutFormDiscount{
+.CheckOutFormDiscount {
     display: flex;
     flex-direction: column;
-    position:relative;
-    left: 20;
 }
 
 .CheckOutFormDiscountTitle h4{
     margin: 1em 0;
+    text-align: center;
 }
 
 .CheckOut .CheckOutTitle{
@@ -112,16 +111,20 @@ margin-left: 0.3em;
 
  .CheckOut  .CheckOutFormANDDiscountSection{
      display: grid;
-     grid-template-columns: repeat(2,1fr);
+     grid-template-areas: 'myArea myArea myArea myArea myArea...';
      gap:1em;
      width: 80%;
      margin: 0 auto;
  }
 
+ .CheckOutForm{
+    grid-area: myArea;
+ }
+
 @media (max-width:800px) {
     .CheckOut  .CheckOutFormANDDiscountSection{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-areas: 'myArea';
     }
 
     .CheckOutForm .input{
