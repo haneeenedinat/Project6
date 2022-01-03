@@ -1,0 +1,130 @@
+.CheckOutForm{
+    display: flex;
+    flex-direction: column;
+    box-shadow: grey 1px 1px 5px;
+    padding: 1em;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.CheckOutFormTitle h4{
+    margin: 1em 0 2em 0;
+}
+
+.AddressInformationCheckOut p{
+    margin-top: 3em;
+}
+
+.CheckOutForm .input{
+display: flex;
+flex-direction: column;
+margin: 0.9em;
+width: 30vw;
+padding: 0.4em;
+border:1px solid black;
+border-radius: 4px;
+}
+
+.CheckOutForm button{
+    width:100%;
+    background:#cf8dc6;
+    border-radius: 4px;
+    height: 5vh;
+    border:2px solid #cf8dc6;
+    font-weight: 600;
+    cursor: pointer;
+   margin: 0.9em auto;
+    
+    
+}
+
+.discountDetails {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.CheckOutForm button:hover{
+    box-shadow: 1px 1px 10px #cf8dc6;
+}
+
+.CheckOutFormDiscount{
+    box-shadow: grey 1px 1px 5px ;
+    padding: 1em;
+    border-radius: 4px;
+  
+}
+
+.DiscountInputForm button{
+    width:40%;
+    background:#cf8dc6;
+    border-radius: 4px;
+    height: 5vh;
+    border:2px solid #cf8dc6;
+    font-weight: 600;
+    cursor: pointer;
+ 
+}
+
+.DiscountInputForm button:hover{
+    box-shadow: 1px 1px 10px #cf8dc6;
+}
+
+.DiscountInputSection .DiscountInputForm button{
+margin-left: 0.3em;
+}
+
+.DiscountInputSection .DiscountInputForm{
+    margin: 1em 0;
+}
+
+.SelectedServicesName p, .SelectedServicesPrice p, .DiscountInputSection h3{
+    font-weight: 600;
+    margin: 1em;
+}
+
+.PersonalInformationCheckOut p , .AddressInformationCheckOut p {
+    font-weight: 700;
+}
+
+
+.CheckOutFormDiscount{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    left: 20;
+}
+
+.CheckOutFormDiscountTitle h4{
+    margin: 1em 0;
+}
+
+.CheckOut .CheckOutTitle{
+    text-align: center;
+    margin: 3em 0;
+}
+
+.CheckOut .discountDetails{
+     margin: 1em 0;
+     line-height: 2;
+ }
+
+ .CheckOut  .CheckOutFormANDDiscountSection{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     gap:1em;
+     width: 80%;
+     margin: 0 auto;
+ }
+
+@media (max-width:800px) {
+    .CheckOut  .CheckOutFormANDDiscountSection{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .CheckOutForm .input{
+        width: 55vw;
+    }
+}
