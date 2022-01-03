@@ -18,7 +18,7 @@ export default function ServicesElementWithoutButton(props){
         </div>
 
         <div className="ServicesElementPrice">
-        <strong> <p>{props.price}</p></strong> 
+        <strong> <p>price : {props.price}</p></strong> 
         </div>
         </div>
         </div>

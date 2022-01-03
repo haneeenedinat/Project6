@@ -20,7 +20,7 @@ export default function ServicesElement(props) {
         </div>
 
         <div className="ServicesElementPrice">
-        <strong> <p>{props.price}</p></strong> 
+        <strong> <p>price : {props.price}</p></strong> 
         </div>
 
        

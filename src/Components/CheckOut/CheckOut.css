@@ -111,13 +111,13 @@ margin-left: 0.3em;
 
  .CheckOut  .CheckOutFormANDDiscountSection{
      display: grid;
-     grid-template-areas: 'myArea myArea myArea myArea myArea...';
+     grid-template-areas: 'myArea  ...';
      gap:1em;
      width: 80%;
      margin: 0 auto;
  }
 
- .CheckOutForm{
+ .CheckOutFormDiscount{
     grid-area: myArea;
  }
 

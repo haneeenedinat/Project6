@@ -20,6 +20,31 @@ export default function NewPath() {
 function CheckOut(props) {
   const SelectedServices = JSON.parse(localStorage.getItem("SelectedServices"));
  
+//   ...................................haneen edit
+
+
+const TimeSelected=localStorage.getItem('TimeSelected')
+?JSON.parse(localStorage.getItem('TimeSelected')):
+localStorage.setItem('TimeSelected',JSON.stringify([]));
+let TotalSelected=0
+
+
+
+TimeSelected.forEach(element => {
+    // console.log(element.price)
+   let  elementPrice=Number(element.price)
+//    console.log(elementPrice)
+     TotalSelected =TotalSelected+elementPrice;
+  
+     return TotalSelected
+});
+
+// console.log(TotalSelected)
+
+
+
+
+// /............................................
 
   const [DiscountInput, setDiscountInput] = useState();
   const [Total, setTotal] = useState();
@@ -34,7 +59,7 @@ function CheckOut(props) {
     e.preventDefault();
     console.log(DiscountInput);
     if (DiscountInput === "haneen") {
-      let priceBefore = Number(SelectedServices.price);
+    let priceBefore=TotalSelected;
       let DiscountPercentage = priceBefore * 0.2;
       console.log(DiscountPercentage);
       console.log(priceBefore);
@@ -68,7 +93,38 @@ function CheckOut(props) {
         <h2>Discount code : haneen</h2>
       </div>
 
+
+
       <div className="CheckOutFormANDDiscountSection">
+
+      <div className="CheckOutFormDiscount">
+          <div className="CheckOutFormDiscountTitle">
+            <h4>Your Order</h4>
+          </div>
+
+          <div className="SelectedServicesName">
+            {/* <p>Services Name :{SelectedServices.title} </p> */}
+          </div>
+
+          <div className="SelectedServicesPrice">
+            <p>Services Price :{TotalSelected}</p>
+          </div>
+
+          <div className="DiscountInputSection">
+            <h3>Discount Code</h3>
+            <form className="DiscountInputForm" onClick={handleSubmite}>
+              <input
+                type="text"
+                placeholder="Discount Code"
+                onChange={handleDiscount}
+              />
+              <button type="submit">Discount</button>
+            </form>
+            <p> <strong>The Price After Discount :{Total} </strong></p>
+          </div>
+        </div>
+
+
         <div className="CheckOutForm">
           <div className="CheckOutFormTitle">
             <h4>CheckOut Form </h4>
@@ -107,32 +163,7 @@ function CheckOut(props) {
           </form>
         </div>
 
-        <div className="CheckOutFormDiscount">
-          <div className="CheckOutFormDiscountTitle">
-            <h4>Your Order</h4>
-          </div>
-
-          <div className="SelectedServicesName">
-            <p>Services Name :{SelectedServices.title} </p>
-          </div>
-
-          <div className="SelectedServicesPrice">
-            <p>Services Price :{SelectedServices.price}</p>
-          </div>
-
-          <div className="DiscountInputSection">
-            <h3>Discount Code</h3>
-            <form className="DiscountInputForm" onClick={handleSubmite}>
-              <input
-                type="text"
-                placeholder="Discount Code"
-                onChange={handleDiscount}
-              />
-              <button type="submit">Discount</button>
-            </form>
-            <p> <strong>The Price After Discount :{Total} </strong></p>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
