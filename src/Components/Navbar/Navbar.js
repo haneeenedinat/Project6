@@ -22,6 +22,8 @@ export default function Navbar() {
 
   const handelLogOut = () => {
     localStorage.removeItem("UserLogin");
+    localStorage.removeItem('TimeSelected');
+    localStorage.removeItem('SelectedServices')
     navigate("/LoginPage");
   };
 

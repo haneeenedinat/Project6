@@ -4,9 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 export default function NewPath() {
+  const UserLogin=JSON.parse(localStorage.getItem('UserLogin'))
+  const TimeSelected=JSON.parse(localStorage.getItem('TimeSelected'))
   const navigate = useNavigate();
   const handelNavigate = () => {
     navigate("/");
+
+    if(TimeSelected){
+      navigate("/ProfilePage");
+    }
   };
 
   return <Login handelNavigate={handelNavigate} />;

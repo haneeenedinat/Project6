@@ -1,0 +1,22 @@
+.TimeSelectedProfileElement table th p {
+  display: flex;
+  align-items: center;
+}
+
+.TimeSelectedProfileElement table td {
+  font-weight: 500;
+  width: 40vw;
+  border-bottom: 3px solid #cf8dc6;
+}
+
+.TimeSelectedProfileElement table td p {
+  text-align: center;
+}
+
+@media (max-width:380px) {
+    .TimeSelectedProfileElement table td p {
+       font-size: 0.79em;
+    }
+
+
+}

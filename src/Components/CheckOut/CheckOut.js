@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import {  useNavigate } from "react-router-dom"
+import swal from "sweetalert";
 import "./CheckOut.css";
 
 export default function NewPath() {
   const UserLogin=JSON.parse(localStorage.getItem('UserLogin'))
+  // const TimeSelected=JSON.parse(localStorage.getItem('TimeSelected'))
+  //                    ?JSON.parse(localStorage.getItem('TimeSelected')):[]
+
   const navigate = useNavigate();
   const handelNavigate = () => {
     if(UserLogin){
-        navigate("/");
-        console.log('hhhhh')
+        navigate("/ProfilePage");
+
     }
-    else{
+
+    if(!UserLogin){
         navigate('/LoginPage')
     }
   };
@@ -18,10 +23,11 @@ export default function NewPath() {
 }
 
 function CheckOut(props) {
-  const SelectedServices = JSON.parse(localStorage.getItem("SelectedServices"));
+  // const SelectedServices = JSON.parse(localStorage.getItem("SelectedServices"))
+  // ?JSON.parse(localStorage.getItem("SelectedServices")):[]
  
-//   ...................................haneen edit
 
+const UserLogin=JSON.parse(localStorage.getItem('UserLogin'))
 
 const TimeSelected=localStorage.getItem('TimeSelected')
 ?JSON.parse(localStorage.getItem('TimeSelected')):
@@ -69,6 +75,7 @@ TimeSelected.forEach(element => {
     }
     console.log(e.target);
     e.target.reset();
+  
   };
 
   const handleSubmiteform = (e) => {
@@ -77,12 +84,44 @@ TimeSelected.forEach(element => {
       setMessageNumber("The number consists of 10 digits");
     } else {
       setMessageNumber("");
-      props.handelNavigate();
+
+      if(!UserLogin){
+        swal({
+          title: 'Login!',
+          text: 'Login  to complete the checkout',
+          buttons:"ok",
+    })
+    setTimeout(()=>{
+      props.handelNavigate(); 
+    },2000)
+    
+      }
+
+      else{
+        swal({
+          title: 'completed!',
+          text: 'check of your profile',
+          buttons:"ok",
+    })
+
+    setTimeout(()=>{
+      props.handelNavigate(); 
+    },2000)
+    
+     }
+          
+    
+    
+  
+
+   
     }
 
-
+  
     
   }
+
+
 
   return (
     <div className="CheckOut">
@@ -118,7 +157,7 @@ TimeSelected.forEach(element => {
                 placeholder="Discount Code"
                 onChange={handleDiscount}
               />
-              <button type="submit">Discount</button>
+              <button type="submit" >Discount</button>
             </form>
             <p> <strong>The Price After Discount :{Total} </strong></p>
           </div>

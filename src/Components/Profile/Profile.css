@@ -1,0 +1,75 @@
+.SelectedServicesInformationProfile table th {
+  border-bottom: 3px solid #cf8dc6;
+  width: 40vw;
+}
+
+.Profile{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.ProfileInformation {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.ProfileImgInformation img {
+  width: 35vw;
+  
+
+}
+.ProfileImgInformation  .divImg{
+    border-right: 1px solid #dbdee1;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProfileImgInformation {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  border: 1px solid #dbdee1;
+  box-shadow: 1px 1px 10px #cf8dc6;
+}
+
+.Profile .ProfileTitle{
+    margin: 2em auto;
+    
+}
+
+.ProfileInformationUserName ,.ProfileInformationEmail{
+    margin: 0.6em 0;
+  
+}
+
+.ProfileInformationUserName h2,.SelectedServicesInformationProfile h2{
+    margin: 1em 0;
+}
+
+@media (max-width:726px) {
+    .ProfileImgInformation {
+      flex-direction: column;
+      width: 90%;
+    }
+
+    .ProfileImgInformation  .divImg{
+        border:none;
+        border-bottom: 1px solid #dbdee1;
+      }
+
+      .ProfileImgInformation img {
+        width: 60vw;
+      }
+
+      .ProfileInformationUserName h2,.SelectedServicesInformationProfile h2{
+           font-size: 1.3em;
+      }
+
+      .ProfileInformation h3{
+          font-size: 1em;
+      }
+        
+}

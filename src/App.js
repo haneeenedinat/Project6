@@ -8,8 +8,10 @@ import LoginPage from "./Page/LoginPage";
 import ServicesPage from "./Page/ServicesPage";
 import OurServicesPage from "./Page/OurServicesPage";
 import CheckOutPage from "./Page/CheckOutPage";
+import ProfilePage from "./Page/ProfilePage";
 
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -21,6 +23,8 @@ function App() {
           <Route path="/ServicesPage" element={<ServicesPage/>}/>
           <Route path='/OurServicesPage' element={<OurServicesPage/>}/>
           <Route path='/CheckOutPage' element={<CheckOutPage/>}/>
+          <Route path='/ProfilePage' element={<ProfilePage/>}/>
+        
 
         </Routes>
         <Footer />

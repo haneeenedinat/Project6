@@ -9,7 +9,7 @@ export default function Services(){
         {
             id:'0',
             src:'../img/Services11.jpg',
-            title:'Birthday Party',
+            title:'Birthday',
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum enim eu nibh finibus',
             price: "200",
         },
@@ -23,7 +23,7 @@ export default function Services(){
         {
             id:'2',
             src:'../img/Services13.png',
-            title:'Graduation Party',
+            title:'Graduation',
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum enim eu nibh finibus',
             price: "250",
         },

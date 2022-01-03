@@ -81,6 +81,7 @@ function Register(props) {
         props.handelNavigate();
       }, 2000);
     }
+    
   };
 
   return (
